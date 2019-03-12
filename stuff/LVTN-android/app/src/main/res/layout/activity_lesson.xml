@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_new"
+    android:layout_height="match_parent"
+    tools:context=".screens.lesson.LessonActivity">
+    <TextView
+        android:layout_margin="20dp"
+        style="@style/ButtonText"
+        android:text="Câu thứ ..."
+        android:layout_gravity="center"
+        android:background="@drawable/text_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mRela"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+            <ViewStub
+                android:id="@+id/layout_stub"
+                android:inflatedId="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ViewStub
+                android:id="@+id/layout_stub2"
+                android:inflatedId="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ViewStub
+                android:id="@+id/layout_stub3"
+                android:inflatedId="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_margin="15dp"
+            android:layout_gravity="center_vertical|right"
+            android:id="@+id/arrowForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_forward_black_24dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
