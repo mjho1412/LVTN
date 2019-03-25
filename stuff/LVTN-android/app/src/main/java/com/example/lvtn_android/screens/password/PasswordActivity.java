@@ -18,6 +18,8 @@ import android.widget.ListView;
 
 import com.example.lvtn_android.R;
 import com.example.lvtn_android.data.PasswordSample;
+import com.example.lvtn_android.screens.main.MainActivity;
+import com.example.lvtn_android.screens.name.NameActivity;
 import com.example.lvtn_android.screens.theme.ThemeChooseActivity;
 import com.example.lvtn_android.screens.theme.ThemeChooseAdapter;
 
@@ -29,6 +31,7 @@ public class PasswordActivity extends AppCompatActivity implements PasswordInter
     Button mBtn ;
     RecyclerView mRecy;
     PasswordAdapter adapter;
+    Boolean isPasswordCorrect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +42,8 @@ public class PasswordActivity extends AppCompatActivity implements PasswordInter
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PasswordActivity.this, ThemeChooseActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
+                if(isPasswordCorrect)startActivity(intent);
             }
         });
 

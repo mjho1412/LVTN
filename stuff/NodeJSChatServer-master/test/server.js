@@ -69,11 +69,27 @@ io.on('connection', (socket) => {
 
   // Events here
 
-  socket.on('login_kid', function (kidUsername, kidPassword) {
+  socket.on('check_name', function(name){
+  	console.log('Checking name : '+name +" ...");
+  	dbConnection.query("SELECT * FROM MyTable WHERE username = '"+name+"'", function(error, rows, fields){
+		if(!!error){
+			console.log('Error in the query');
+			socket.emit('response',"success");
+		} else {
+			console.log('Successfully query request\n');
+			console.log(rows[0]);
+			socket.emit('response',"fail");
+		}
+	});
 
-    console.log(kidUsername+' attempted to login with password : '+kidPassword +" ...");
-    socket.emit('abc',"Testing");
+    
   });
+
+  // socket.on('login_kid', function (kidUsername, kidPassword) {
+
+  //   console.log(kidUsername+' attempted to login with password : '+kidPassword +" ...");
+  //   socket.emit('abc',"Testing");
+  // });
 
   socket.on('create_account', function (username, password) {
 
