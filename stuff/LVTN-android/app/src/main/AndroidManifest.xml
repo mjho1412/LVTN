@@ -15,21 +15,27 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.name.NameActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.lesson.LessonActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.password.PasswordActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.login.LoginActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.theme.ThemeChooseActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.plash.PlashActivity"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -41,6 +47,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".screens.main.MainActivity"
             android:screenOrientation="landscape" />
     </application>

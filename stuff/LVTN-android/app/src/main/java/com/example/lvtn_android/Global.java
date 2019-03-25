@@ -27,8 +27,8 @@ public class Global extends Application {
         try {
 //            mSocket = IO.socket("http://172.20.10.9:3003");
 //            mSocket = IO.socket("http://172.28.241.55:3003");
-            mSocket = IO.socket("http://192.168.185.2:3003");
-//            mSocket.connect();
+            mSocket = IO.socket("http://192.168.1.9:3005");
+            mSocket.connect();
 //            mSocket.emit("join", "Android device");
         } catch (URISyntaxException e) {
             e.printStackTrace();
@@ -60,10 +60,8 @@ public class Global extends Application {
                         Log.i("Socket.io", ">>>>>>>>> The socket is now disconnected <<<<<<<<<<");
                     }
                 });
-        mSocket.connect();
-
-//        Log.i("here?","hreeee");
 //        mSocket.connect();
+
     }
 
     private Emitter.Listener messageHandler= new Emitter.Listener() {

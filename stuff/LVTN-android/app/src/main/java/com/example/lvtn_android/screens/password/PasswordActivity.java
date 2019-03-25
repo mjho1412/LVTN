@@ -58,10 +58,14 @@ public class PasswordActivity extends AppCompatActivity implements PasswordInter
         themeList.add("Camel");
         themeList.add("Sheep");
         themeList.add("Goat");
+        themeList.add("Cow");
+        themeList.add("Camel");
+        themeList.add("Sheep");
+        themeList.add("Goat");
 
         mRecy = findViewById(R.id.mListView);
 
-        mRecy.setLayoutManager(new GridLayoutManager(this, 2));
+        mRecy.setLayoutManager(new GridLayoutManager(this, 3));
         adapter = new PasswordAdapter(this, themeList);
         adapter.setClickListener(this);
         mRecy.setAdapter(adapter);
@@ -75,7 +79,8 @@ public class PasswordActivity extends AppCompatActivity implements PasswordInter
 
     @Override
     public void onItemClick(View view, int position) {
-
+        Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

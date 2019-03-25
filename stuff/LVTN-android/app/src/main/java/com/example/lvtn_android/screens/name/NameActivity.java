@@ -30,13 +30,17 @@ public class NameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
 
-
+        nameText = findViewById(R.id.nameText);
         toPass = findViewById(R.id.toPass);
         toPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Global.mSocket.emit("check_name", nameText.getText());
 
+                Intent intent = new Intent(NameActivity.this, PasswordActivity.class);
+//                intent.putExtra("name",nameText.getText());
+//                intent.putExtra("isNameNotRegistered",isNameNotRegisted);
+                startActivity(intent);
 
             }
         });

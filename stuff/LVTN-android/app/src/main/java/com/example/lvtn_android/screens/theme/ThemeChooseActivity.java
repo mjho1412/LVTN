@@ -33,10 +33,13 @@ public class ThemeChooseActivity extends AppCompatActivity implements ThemeChoos
         themeList.add("Camel");
         themeList.add("Sheep");
         themeList.add("Goat");
+        themeList.add("Camel");
+        themeList.add("Sheep");
+        themeList.add("Goat");
 
         mRecy = findViewById(R.id.mRecy);
 
-        mRecy.setLayoutManager(new GridLayoutManager(this, 2));
+        mRecy.setLayoutManager(new GridLayoutManager(this, 3));
         adapter = new ThemeChooseAdapter(this, themeList);
         adapter.setClickListener(this);
         mRecy.setAdapter(adapter);
